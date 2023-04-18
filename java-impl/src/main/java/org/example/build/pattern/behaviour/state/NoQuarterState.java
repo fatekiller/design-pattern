@@ -13,7 +13,8 @@ public class NoQuarterState implements State{
      */
     @Override
     public void insertQuarter() {
-
+        System.out.println("money inserted, you can turn crack or eject money");
+        this.gumballMachine.setState(gumballMachine.hadQuarterState);
     }
 
     /**
@@ -21,7 +22,7 @@ public class NoQuarterState implements State{
      */
     @Override
     public void ejectQuarter() {
-
+        System.out.println("you should insert quarter first");
     }
 
     /**
@@ -29,7 +30,7 @@ public class NoQuarterState implements State{
      */
     @Override
     public void turnCrank() {
-
+        System.out.println("you should insert quarter first");
     }
 
     /**
@@ -37,6 +38,6 @@ public class NoQuarterState implements State{
      */
     @Override
     public void dispense() {
-
+        System.out.println("you should insert quarter first");
     }
 }

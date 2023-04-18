@@ -13,7 +13,7 @@ public class SoldState implements State{
      */
     @Override
     public void insertQuarter() {
-
+        System.out.println("sold in progress");
     }
 
     /**
@@ -21,7 +21,7 @@ public class SoldState implements State{
      */
     @Override
     public void ejectQuarter() {
-
+        System.out.println("sold in progress");
     }
 
     /**
@@ -29,7 +29,7 @@ public class SoldState implements State{
      */
     @Override
     public void turnCrank() {
-
+        System.out.println("sold in progress");
     }
 
     /**
@@ -37,6 +37,12 @@ public class SoldState implements State{
      */
     @Override
     public void dispense() {
-
+        gumballMachine.releaseBall();
+        if (gumballMachine.count == 0) {
+            System.out.println("gumball already sold out");
+            gumballMachine.setState(gumballMachine.soldOutState);
+        } else {
+            gumballMachine.setState(gumballMachine.noQuarterState);
+        }
     }
 }

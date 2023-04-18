@@ -13,7 +13,7 @@ public class SoldOutState implements State{
      */
     @Override
     public void insertQuarter() {
-
+        System.out.println("this machine is sold out");
     }
 
     /**
@@ -21,7 +21,7 @@ public class SoldOutState implements State{
      */
     @Override
     public void ejectQuarter() {
-
+        System.out.println("please insert quarter first");
     }
 
     /**
@@ -29,7 +29,7 @@ public class SoldOutState implements State{
      */
     @Override
     public void turnCrank() {
-
+        System.out.println("please insert quarter first");
     }
 
     /**
@@ -37,6 +37,6 @@ public class SoldOutState implements State{
      */
     @Override
     public void dispense() {
-
+        System.out.println("please insert quarter first");
     }
 }
