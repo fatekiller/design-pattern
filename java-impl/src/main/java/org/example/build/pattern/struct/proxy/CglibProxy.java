@@ -18,9 +18,9 @@ public class CglibProxy implements MethodInterceptor {
 
     @Override
     public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
-        System.out.println("cglib bef");
-        Object result = methodProxy.invoke(object, args);
-        System.out.println("买房后装修");
+        System.out.println("cglib before");
+        Object result = methodProxy.invokeSuper(object, args);
+        System.out.println("cglib after");
         return result;
     }
 }
