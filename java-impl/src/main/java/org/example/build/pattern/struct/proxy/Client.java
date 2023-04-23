@@ -21,7 +21,6 @@ public class Client {
         CglibProxy cglibProxy = new CglibProxy();
         TargetImpl2 proxy3 = (TargetImpl2) cglibProxy.getInstance(target2);
         proxy3.doSomething();
-
     }
 
 
